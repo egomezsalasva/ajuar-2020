@@ -7,12 +7,18 @@ const AppContainer = styled.div`
   height: 100vh;
   
   .headerContainer{
-    background: orange;
     position: absolute;
     top: 25px;
     width: 100%;
     text-align: center;
-    color: #fff;
+    
+    .headerLink{
+      font-family: ${fonts.display};
+      color: ${colors.light};
+      font-size: 20px;
+      letter-spacing: 2.2px;
+      text-decoration: none;
+    }
   }
 `
 
@@ -22,6 +28,8 @@ const App = () => {
       <div className="headerContainer">
         <a href="https://www.instagram.com/ajuarestudio/" target="_blank" rel="noreferrer" className="headerLink">@AJUARESTUDIO</a>
       </div>
+
+      <div 
       
     </AppContainer>
   )
