@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Marquee from 'react-double-marquee'
 import { fonts, colors } from './brandingStyles'
 import logo  from './assets/vectors/logoAjuar.svg'
 import smiley  from './assets/vectors/smileyAjuar.svg'
@@ -36,6 +37,7 @@ const AppContainer = styled.div`
       .logo{
       }
     }
+
     .smileyWrapper{
       transform: translateY(-5px);
       margin-top: 32px;
@@ -44,6 +46,12 @@ const AppContainer = styled.div`
 
       }
     }
+  }
+
+  .marqueeContainer{
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
   }
 `
 
@@ -60,6 +68,22 @@ const App = () => {
         </div>
         <div className="smileyWrapper">
           <img src={smiley} alt="smiley Ajuar" className="smiley" />
+        </div>
+      </div>
+
+      <div className="marqueeContainer">
+        <div style={
+          {
+            width: '100%', 
+            whiteSpace: 'nowrap', 
+            fontFamily: fonts.text,
+            fontSize: "19px",
+            color: colors.light,
+            letterSpacing: "0.37px",
+            textTransform: "uppercase",
+          }
+        }>
+          <Marquee speed={0.04} delay={3000} direction="left">¡Hola! Somos Ajuar, el menaje digital que necesita tu proyecto para el si quiero de tu cliente. Muy pronto abre las puertas de su casa. Gracias por venir. @ajuarestudio. </Marquee>
         </div>
       </div>
       
