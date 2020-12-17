@@ -77,7 +77,7 @@ const App = () => {
             width: '100%', 
             whiteSpace: 'nowrap', 
             fontFamily: fonts.text,
-            fontSize: "19px",
+            fontSize: "20px",
             color: colors.light,
             letterSpacing: "0.37px",
             textTransform: "uppercase",
