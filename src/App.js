@@ -1,9 +1,16 @@
-import React from 'react'
-import styled from 'styled-components'
-import Marquee from 'react-double-marquee'
-import { fonts, colors, mediaQueries } from './brandingStyles'
-import logo  from './assets/vectors/logoAjuar.svg'
-import smiley  from './assets/vectors/smileyAjuar.svg'
+// IMPORTS
+  //-Modules
+  import React from 'react'
+  import styled from 'styled-components'
+  import Marquee from 'react-double-marquee'
+  //-Assets
+  import logo  from './assets/vectors/logoAjuar.svg'
+  import smiley  from './assets/vectors/smileyAjuar.svg'
+  //-Data
+  import { fonts, colors, mediaQueries } from './brandingStyles'
+  //-Custom hooks
+  import {useMediaQuery} from './customHooks/mediaQueryHook';
+// 
 
 const AppContainer = styled.div`
   width: 100vw;
@@ -72,17 +79,23 @@ const AppContainer = styled.div`
   }
 `
 
-const marqueeStyles = {
-  width: '100%', 
-  whiteSpace: 'nowrap', 
-  fontFamily: fonts.text,
-  fontSize: "20px",
-  color: colors.light,
-  letterSpacing: "0.37px",
-  textTransform: "uppercase",
-}
+
 
 const App = () => {
+
+  //Inline Style For Marquee Module & Media Query using custom hook
+    const marqueeMobile = useMediaQuery(`(max-width: ${mediaQueries.mobile})`)
+    const marqueeStyles = {
+      width: '100%', 
+      whiteSpace: 'nowrap', 
+      fontFamily: fonts.text,
+      fontSize: marqueeMobile ? "30px" : "20px",
+      color: colors.light,
+      letterSpacing: marqueeMobile ? "1.6px" :"0.37px",
+      textTransform: "uppercase",
+    }
+  // 
+
   return (
     <AppContainer>
       <div className="headerContainer">
