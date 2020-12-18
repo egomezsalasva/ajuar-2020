@@ -9,7 +9,7 @@
   //-Data
   import { fonts, colors, mediaQueries } from './brandingStyles'
   //-Custom hooks
-  import {useMediaQuery} from './customHooks/mediaQueryHook';
+  // import {useMediaQuery} from './customHooks/mediaQueryHook'
 // 
 
 
@@ -17,6 +17,7 @@
   const AppContainer = styled.div`
     width: 100vw;
     height: 100vh;
+    max-height: 100vh;
     
     .headerContainer{
       position: absolute;
@@ -86,16 +87,16 @@
   const App = () => {
 
     //Inline Style For Marquee Module & Media Query using custom hook
-      const marqueeMobile = useMediaQuery(`(max-width: ${mediaQueries.mobile})`)
-      const marqueeStyles = {
-        width: '100%', 
-        whiteSpace: 'nowrap', 
-        fontFamily: fonts.text,
-        fontSize: marqueeMobile ? "30px" : "20px",
-        color: colors.light,
-        letterSpacing: marqueeMobile ? "1.6px" :"0.37px",
-        textTransform: "uppercase",
-      }
+      // const marqueeMobile = useMediaQuery(`(max-width: ${mediaQueries.mobile})`)
+      // const marqueeStyles = {
+      //   width: '100%', 
+      //   whiteSpace: 'nowrap', 
+      //   fontFamily: fonts.text,
+      //   fontSize: marqueeMobile ? "30px" : "20px",
+      //   color: colors.light,
+      //   letterSpacing: marqueeMobile ? "1.6px" :"0.37px",
+      //   textTransform: "uppercase",
+      // }
     // 
 
     return (
@@ -116,7 +117,15 @@
         </div>
 
         <div className="marqueeContainer">
-          <div style={marqueeStyles}>
+          <div style={{
+            width: '100%', 
+            whiteSpace: 'nowrap', 
+            fontFamily: fonts.text,
+            fontSize: "20px",
+            color: colors.light,
+            letterSpacing: "0.37px",
+            textTransform: "uppercase",
+          }}>
             <Marquee speed={0.04} delay={3000} direction="left" childMargin={8}>¡Hola! Somos Ajuar, el menaje digital que necesita tu proyecto para el si quiero de tu cliente. Muy pronto abre las puertas de su casa. Gracias por venir. @ajuarestudio. </Marquee>
           </div>
         </div>
