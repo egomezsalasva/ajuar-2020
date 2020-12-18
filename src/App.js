@@ -101,7 +101,7 @@
 
     return (
       <AppContainer>
-        
+
         <div className="headerContainer">
           <a href="https://www.instagram.com/ajuarestudio/" target="_blank" rel="noreferrer" className="headerLink">@AJUARESTUDIO</a>
         </div>
