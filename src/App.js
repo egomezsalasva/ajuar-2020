@@ -17,7 +17,6 @@
   const AppContainer = styled.div`
     width: 100vw;
     height: 100vh;
-    max-height: 100vh;
     
     .headerContainer{
       position: absolute;
@@ -101,6 +100,7 @@
 
     return (
       <AppContainer>
+
 
         <div className="headerContainer">
           <a href="https://www.instagram.com/ajuarestudio/" target="_blank" rel="noreferrer" className="headerLink">@AJUARESTUDIO</a>
