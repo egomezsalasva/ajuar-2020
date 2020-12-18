@@ -9,4 +9,9 @@ const colors = {
     light: "#fff",
 }
 
-export { fonts, colors } 
+const mediaQueries = {
+    tablet: "800px",
+    mobile: "450px",
+}
+
+export { fonts, colors, mediaQueries } 

@@ -1,19 +1,24 @@
 import React from 'react'
 import styled from 'styled-components'
 import Marquee from 'react-double-marquee'
-import { fonts, colors } from './brandingStyles'
+import { fonts, colors, mediaQueries } from './brandingStyles'
 import logo  from './assets/vectors/logoAjuar.svg'
 import smiley  from './assets/vectors/smileyAjuar.svg'
 
 const AppContainer = styled.div`
   width: 100vw;
   height: 100vh;
+  max-height: 100vh;
   
   .headerContainer{
     position: absolute;
     top: 25px;
     width: 100%;
     text-align: center;
+    @media (max-width: ${mediaQueries.mobile}){
+      top: 50%;
+      transform: translateY(-50%);
+    }
     
     .headerLink{
       font-family: ${fonts.display};
@@ -31,16 +36,28 @@ const AppContainer = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     padding-top: 10px;
+    @media (max-width: ${mediaQueries.mobile}){
+      top: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding-top: 0px;
+    }
 
     .logoWrapper{
 
       .logo{
+        @media (max-width: ${mediaQueries.mobile}){
+          width: 91.2vw;
+        }
       }
     }
 
     .smileyWrapper{
       transform: translateY(-5px);
       margin-top: 32px;
+      @media (max-width: ${mediaQueries.mobile}){
+        margin-top: 25px;
+      }
 
       .smiley{
 
