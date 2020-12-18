@@ -117,7 +117,7 @@
 
         <div className="marqueeContainer">
           <div style={marqueeStyles}>
-            <Marquee speed={0.04} delay={1000} direction="left" childMargin={8}>¡Hola! Somos Ajuar, el menaje digital que necesita tu proyecto para el si quiero de tu cliente. Muy pronto abre las puertas de su casa. Gracias por venir. @ajuarestudio. </Marquee>
+            <Marquee speed={0.04} delay={3000} direction="left" childMargin={8}>¡Hola! Somos Ajuar, el menaje digital que necesita tu proyecto para el si quiero de tu cliente. Muy pronto abre las puertas de su casa. Gracias por venir. @ajuarestudio. </Marquee>
           </div>
         </div>
         
